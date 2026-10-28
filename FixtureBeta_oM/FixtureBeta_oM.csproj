@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <BaseOutputPath>..\Build\</BaseOutputPath>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Description>https://github.com/BuroHappoldEngineering/CSharpSchema_Test</Description>
+    <Description>https://github.com/BHoM/CSharpSchema_Test</Description>
     <Version>1.0.0</Version>
     <Authors>BHoM</Authors>
     <Copyright>Copyright © https://github.com/BHoM</Copyright>

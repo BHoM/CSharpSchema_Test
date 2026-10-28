@@ -26,5 +26,5 @@ dotnet build CSharpSchema_Test.sln -c Release
 As in every BHoM repository, the build copies each assembly to `%ProgramData%\BHoM\Assemblies`. To build without that, add
 `-p:SkipAssemblyCopy=true`.
 
-The assemblies carry this repository's URL in their description. The BHoM_PythonSchema generator only reads assemblies whose
-organisation it is told about, so run it with `--org BHoM,BuroHappoldEngineering` (BHoM for the base classes, the other for these).
+The assemblies carry this repository's URL in their description (`https://github.com/BHoM/CSharpSchema_Test`). The
+BHoM_PythonSchema generator uses it to record which repository owns each class, so linked C# pull requests go here.
