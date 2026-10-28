@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <BaseOutputPath>..\Build\</BaseOutputPath>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Description>https://github.com/BuroHappoldEngineering/CSharpSchema_Test</Description>
+    <Version>1.0.0</Version>
+    <Authors>BHoM</Authors>
+    <Copyright>Copyright © https://github.com/BHoM</Copyright>
+    <RootNamespace>BH.oM.FixtureBeta</RootNamespace>
+    <FileVersion>1.0.0.0</FileVersion>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BHoM">
+      <HintPath>$(ProgramData)\BHoM\Assemblies\BHoM.dll</HintPath>
+      <Private>false</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FixtureAlpha_oM\FixtureAlpha_oM.csproj" />
+  </ItemGroup>
+
+  <!-- Set SkipAssemblyCopy=true to build without installing the dll in ProgramData -->
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(SkipAssemblyCopy)' != 'true'">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetFileName)&quot;  &quot;$(ProgramData)\BHoM\Assemblies&quot; /Y" />
+  </Target>
+
+</Project>
