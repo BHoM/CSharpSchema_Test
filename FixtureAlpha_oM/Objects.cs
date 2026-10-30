@@ -60,6 +60,9 @@ namespace BH.oM.FixtureAlpha
         public virtual PointLike Start { get; set; } = null;
         public virtual long Count { get; set; } = 3;
         public virtual float Small { get; set; } = 0.5f;
+
+        [Description("Name of the material.")]
+        public virtual string Material { get; set; } = "Steel";
     }
 
     public class Collections : BHoMObject
