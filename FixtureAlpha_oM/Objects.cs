@@ -62,7 +62,7 @@ namespace BH.oM.FixtureAlpha
         public virtual float Small { get; set; } = 0.5f;
 
         [Description("Name of the material.")]
-        public virtual string Material { get; set; } = "Steel";
+        public virtual string Material { get; set; } = "Concrete";
     }
 
     public class Collections : BHoMObject
