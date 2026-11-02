@@ -23,6 +23,7 @@
 using System.ComponentModel;
 using BH.oM.Base;
 
+
 namespace BH.oM.FixtureAlpha
 {
     public class PointLike : IGeometryLike
@@ -42,3 +43,4 @@ namespace BH.oM.FixtureAlpha
         public virtual string Label { get; set; } = null;
     }
 }
+
